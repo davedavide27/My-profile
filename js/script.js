@@ -1,3 +1,23 @@
+// ==================== HAMBURGER MENU TOGGLE ====================
+
+function toggleMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const hamburger = document.getElementById('hamburger');
+    
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
+
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', function() {
+        const navMenu = document.getElementById('navMenu');
+        const hamburger = document.getElementById('hamburger');
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+    });
+});
+
 // ==================== SMOOTH SCROLL CONFIGURATION ====================
 
 // Enable smooth scroll behavior for all navigation links
